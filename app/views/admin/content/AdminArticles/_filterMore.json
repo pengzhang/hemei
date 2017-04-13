@@ -1,0 +1,12 @@
+#{set 'filterMore'}
+[
+    {
+        "id": "createDate",
+        "title": "创建日期",
+        "isMultiple":false,
+        "valueField":"value",
+        "textField":"text",
+        "data":[{"value":" > curdate()-1","text":"最近一天"},{"value":" > curdate()-2","text":"最近三天"},{"value":" > curdate()-7","text":"最近一周"},{"value":" > curdate()-30","text":"最近一月"}]
+    }
+]
+#{/set}

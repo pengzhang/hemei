@@ -1,0 +1,41 @@
+#{extends '/CRUD/layout.html' /}
+#{set title:messages.get('crud.list.title', type.name) /}
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">	
+	<div class="row">
+		<div class="col-lg-12">
+			<div id="crudList" class="${type.name}">
+			
+			    <h2 id="crudListTitle">&{'crud.list.title', type.name}</h2>
+			
+			    <div id="crudListSearch">
+			        #{crud.search /}
+			    </div>
+			
+			    <div id="crudListTable">
+			        #{crud.table fields:['id', 'title','author', 'username', 'createDate','operation']}
+			         #{crud.custom 'createDate'}
+				        	${object.createDate.format('yyyy-MM-dd hh:mm:ss')}
+				     #{/crud.custom}
+				     #{crud.custom 'operation'}
+				        	<a class="btn btn-primary btn-xs add_comment" data="${object.id}" >添加评论</a>
+				     #{/crud.custom}
+			        #{/crud.table}
+			    </div>
+			
+			    <div id="crudListPagination">
+			        #{crud.pagination /}
+			    </div>
+			    
+			</div>
+		</div>
+	</div>
+</div>
+
+#{plugins.comment_modal /}
+#{set 'moreScripts'}
+#{plugins.simeditor_js_css /}
+#{plugins.simeditor editor:'comment'/}
+#{include './_filterMore.json' /}
+#{plugins.filterMore filter:filterMore/}
+#{plugins.comment_modal_js_css otype:'Article'/}
+#{/set}

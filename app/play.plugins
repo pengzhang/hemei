@@ -1,0 +1,5 @@
+10:plugins.router.RouterAnnotationsPlugin
+100:plugins.accesslog.AccessLogPlugin
+250:plugins.redis.RedisPlugin
+500:plugins.jsonparam.JsonParamConvertPlugin
+

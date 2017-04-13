@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="@@{'/public/plugins/crud/stylesheets/bootstrap.min.css'}" rel="stylesheet">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        <script src="@@{'/public/plugins/crud/javascripts/jquery.min.js'}"></script>
+		<script src="@@{'/public/plugins/crud/javascripts/bootstrap.min.js'}"></script>
+        #{get 'moreScripts' /}
+    </head>
+    <body>
+        #{doLayout /}
+        <div class="navbar-fixed-bottom">
+	        <div class="pull-right">
+	        	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261165595'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261165595%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+	    	</div>
+    	</div>
+    </body>
+</html>
